@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>NU IREC Checker</title>
+</head>
+<body>
+    <h1>Проверка заявки NU IREC</h1>
+    <form method="post" enctype="multipart/form-data">
+        <label>Загрузите .docx файл:</label>
+        <input type="file" name="file" required>
+        <button type="submit">Проверить</button>
+    </form>
+
+    {% if report %}
+    <hr>
+    <h2>Отчёт:</h2>
+    <pre>{{ report }}</pre>
+    {% endif %}
+</body>
+</html>
